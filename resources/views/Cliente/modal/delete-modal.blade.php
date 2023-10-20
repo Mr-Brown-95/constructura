@@ -9,7 +9,7 @@
             </div>
             <div class="modal-body">
                 <p>¿Estás seguro de que deseas eliminar este cliente?</p>
-                <!-- Agregar más detalles la eliminación aquí -->
+                <!-- Agregar más detalles o información sobre la eliminación aquí -->
             </div>
             <div class="modal-footer">
                 <!-- Botón para cancelar la eliminación y cerrar el modal -->

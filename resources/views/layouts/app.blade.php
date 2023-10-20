@@ -14,48 +14,13 @@
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Librerias del profe victor  -->
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.datatables.net/v/bs4-4.1.1/jq-3.3.1/jszip-2.5.0/dt-1.10.24/b-1.7.0/b-html5-1.7.0/b-print-1.7.0/r-2.2.7/datatables.min.css" />
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <!-- Estilos para el datable -->
+    @yield('css')
 
-    <!--  CSS personalizado para DataTable -->
-    <style>
-        /* Estilo para los botones de DataTables */
-        .dt-buttons {
-            float: left;
-            margin-right: 10px;
-        }
-
-        /* Estilo para los botones de descarga en Excel, PDF e impresión */
-        .buttons-copy,
-        .buttons-excel,
-        .buttons-pdf,
-        .buttons-print {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        /* Estilo para el botón de paginación */
-        .dataTables_paginate a {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 5px 10px;
-            cursor: pointer;
-            margin-right: 5px;
-        }
-    </style>
 </head>
 
 <body>
@@ -121,9 +86,6 @@
             @yield('content')
         </main>
 
-        <!-- Agrega modal para crear -->
-        @include('Cliente.modal.create-modal')
-
         <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
             <div class="col-md-4 d-flex align-items-center">
                 <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
@@ -135,12 +97,15 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
+        <!-- Scrip -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
         </script>
 
     </div>
+
+    @yield('js')
+
 </body>
 
 </html>

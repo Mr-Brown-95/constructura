@@ -100,7 +100,7 @@ class ClienteController extends Controller
 
     private function generateTableHtml($clientes)
     {
-        $html = '<table id="example" class="table table-striped table-bordered" style="width:100%">';
+        $html = '<table id="example" class="table table-striped table-bordered mb-3" style="width:100%">';
         $html .= '<thead>';
         $html .= '<tr>';
         $html .= '<th>Proyecto</th>';

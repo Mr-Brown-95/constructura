@@ -1,5 +1,5 @@
 <!-- Modal Editar Cliente -->
-<div class="modal fade" id="{{ $modalId }}" tabindex="-1" aria-labelledby="{{ $modalId }}Label"
+<div class="modal fade" id="{{ $modalId }}" tabindex="-1" aria-labelledby=id="{{ $modalId }}Label"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -8,7 +8,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <!-- Formulario para editar cliente -->
+                <!-- Formulario para agregar cliente -->
                 <div class="card mx-auto" style="width: 25rem;">
                     <div class="card-body ">
                         <h5 class="card-title">Datos del cliente</h5>
@@ -42,13 +42,13 @@
                             </div>
                             <div class="col-12">
                                 <label for="email" class="form-label">Email</label>
-                                <input type="text" name="email" class="form-control" id="email"
+                                <input type="email" name="email" class="form-control" id="email"
                                     value="{{ $cliente->email }}" tabindex="6" required>
                             </div>
                             <div class="col-md-6">
                                 <label for="dir_calle" class="form-label">Calle</label>
                                 <input type="text" name="dir_calle" class="form-control" id="dir_calle"
-                                    value="{{ $cliente->dir_calle }}Principal" tabindex="7" required>
+                                    value="{{ $cliente->dir_calle }}" tabindex="7" required>
                             </div>
                             <div class="col-md-3">
                                 <label for="dir_numExt" class="form-label">Num Ext</label>
@@ -66,13 +66,13 @@
                                     value="{{ $cliente->telefono }}" tabindex="10" required>
                             </div>
                             <div class="col-12">
-                                <!-- Botón -->
-                                <button type="button" class="btn btn-secondary"
-                                    data-bs-dismiss="modal">Cancelar</button>
+                                <!-- Botton -->
+                                <a href="/clientes" class="btn btn-secondary" tabindex="11">Cancelar</a>
                                 <button type="submit" class="btn btn-primary" tabindex="12">Guardar</button>
                             </div>
                         </form>
                     </div>
+
                 </div>
             </div>
         </div>
