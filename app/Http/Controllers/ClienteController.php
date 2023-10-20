@@ -149,4 +149,10 @@ class ClienteController extends Controller
 
         return $html;
     }
+
+    public function imprimirAutores(){
+        $autores = Cliente::all();
+        $pdf = \PDF::loadView('cliente.listaClientes', ['clientes'=>$autores]);
+        return $pdf->download('autores.pdf');
+    }
 }
